@@ -2,12 +2,37 @@ package com.epam.client;
 
 import com.epam.general.Drinks;
 import com.epam.general.Food;
+import com.epam.general.MyScanner;
 import com.epam.restaurant.Order;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 
 public class Client {
+
+	private double cash;
+
+	public Client() {
+		setCash();
+	}
+
+	private void setCash() {
+		System.out.print("Set cash: ");
+		while (MyScanner.getInstance().hasNext()) {
+			if (MyScanner.getInstance().hasNextInt()) {
+				cash = MyScanner.getInstance().nextInt();
+				break;
+			} else {
+				System.out.print("Invalid input\n\nSet Cash: ");
+				MyScanner.getInstance().next();
+			}
+		}
+	}
+
+	public void getCash() {
+		System.out.println(cash);
+	}
 
 	public Order makeOrder() {
 

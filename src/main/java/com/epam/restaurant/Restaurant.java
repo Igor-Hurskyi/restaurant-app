@@ -91,7 +91,7 @@ public class Restaurant {
 
     public void processOrder(Order order) {
         generatePrice(order);
-        System.out.println("Order " + order.toString() + " Processed.");
+        System.out.println("Order " + order.toString() + " processed.");
     }
 
     public boolean checkNewClient() {
