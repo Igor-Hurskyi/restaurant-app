@@ -1,6 +1,8 @@
 package com.epam.main;
 
 import com.epam.client.Client;
+import com.epam.client.PoorClient;
+import com.epam.client.RichClient;
 import com.epam.general.Cities;
 import com.epam.general.MyScanner;
 import com.epam.restaurant.Order;
@@ -19,15 +21,13 @@ public class Console {
 		boolean isNextClient = true;
 
 		while (isNextClient) {
-			Client client = new Client();
-			client.getCash();
+			Client client = new RichClient();
 			Order order = client.makeOrder();
-//			restaurant.processOrder(order);
-//			client.eat();
-//			client.pay();
-//			client.leave();
-//			order.printPrice();
-//			isNextClient = restaurant.checkNewClient();
+			restaurant.processOrder(order);
+			client.eat();
+			client.pay(order);
+			client.leave();
+			isNextClient = restaurant.checkNewClient();
 		}
 	}
 
