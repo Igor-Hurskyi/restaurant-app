@@ -105,7 +105,7 @@ public class Restaurant {
             throw new IllegalArgumentException();
         }
 
-        boolean isNextClient = answer.toString().equals("y") ? true : false;
+        boolean isNextClient = answer.toString().equals("y");
         return isNextClient;
     }
 

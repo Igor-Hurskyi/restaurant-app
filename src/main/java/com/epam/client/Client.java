@@ -38,18 +38,73 @@ public class Client {
 
 		Order order;
 
-		List<Food> foodList = new ArrayList<>();
-		List<Drinks> drinksList = new ArrayList<>();
+		List<Food> foodList = selectFood();
 
-		foodList.add(Food.soup);
-		foodList.add(Food.potato);
-
-		drinksList.add(Drinks.CocaCola);
-		drinksList.add(Drinks.whiskey);
+		List<Drinks> drinksList = selectDrinks();
 
 		order = new Order(foodList, drinksList);
 
 		return order;
+	}
+
+	private List<Drinks> selectDrinks() {
+
+		List<Drinks> drinksList = new ArrayList<>();
+		boolean wantMore = true;
+
+		while (wantMore) {
+			Drinks drink = addDrinks();
+			drinksList.add(drink);
+			System.out.print("One more? (y/n): ");
+			wantMore = MyScanner.getInstance().next().charAt(0) == 'y';
+		}
+
+		return drinksList;
+	}
+
+	private Drinks addDrinks() {
+		Drinks drink;
+
+		System.out.print("Select drink: ");
+
+		try {
+			drink = Drinks.valueOf(MyScanner.getInstance().next());
+		} catch (IllegalArgumentException e) {
+			System.out.print("No such drink detected.\n\n");
+			drink = addDrinks();
+		}
+
+		return drink;
+	}
+
+	public List<Food> selectFood() {
+
+		List<Food> foodList = new ArrayList<>();
+		boolean wantMore = true;
+
+		while (wantMore) {
+			Food food = addFood();
+			foodList.add(food);
+			System.out.print("One more? (y/n): ");
+			wantMore = MyScanner.getInstance().next().charAt(0) == 'y';
+		}
+
+		return foodList;
+	}
+
+	private Food addFood() {
+		Food food;
+
+		System.out.print("Select food: ");
+
+		try {
+			food = Food.valueOf(MyScanner.getInstance().next());
+		} catch (IllegalArgumentException e) {
+			System.out.print("No such food detected.\n\n");
+			food = addFood();
+		}
+
+		return food;
 	}
 
 	public void eat() {

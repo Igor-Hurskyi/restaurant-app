@@ -23,6 +23,9 @@ public class Order {
 
 		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 		ID = timestamp.getTime();
+
+		System.out.print("Created new order: ");
+		display();
 	}
 
 	public void iterateFoodList() {
@@ -44,5 +47,15 @@ public class Order {
 	@Override
 	public String toString() {
 		return "@" + Long.toString(ID);
+	}
+
+	public void display() {
+		for(Food food : foodList) {
+			System.out.print("[" + food + "] ");
+		}
+
+		for(Drinks drink : drinksList) {
+			System.out.print("[" + drink + "] ");
+		}
 	}
 }

@@ -21,7 +21,7 @@ public class Console {
 		while (isNextClient) {
 			Client client = new Client();
 			client.getCash();
-//			Order order = client.makeOrder();
+			Order order = client.makeOrder();
 //			restaurant.processOrder(order);
 //			client.eat();
 //			client.pay();
@@ -31,15 +31,18 @@ public class Console {
 		}
 	}
 
-	private static Cities determinateCity() {  //remake like we do it on setCash
+	private static Cities determinateCity() {
 		Cities city;
+
 		System.out.print("Determinate a city: ");
+
 		try {
 			city = Cities.valueOf(MyScanner.getInstance().nextLine());
 		} catch (IllegalArgumentException e) {
 			System.out.println("No such city detected.\n");
 			city = determinateCity();
 		}
+
 		return city;
 	}
 }
