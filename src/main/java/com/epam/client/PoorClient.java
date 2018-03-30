@@ -43,17 +43,7 @@ public class PoorClient extends AbstractClient implements Client {
 	}
 
 	@Override
-	public void eat() {
-
-	}
-
-	@Override
 	public void sleep() {
 
-	}
-
-	@Override
-	public Order makeOrder() {
-		return null;
 	}
 }
