@@ -11,8 +11,6 @@ public class Console {
 
 	public static void main(String[] args) {
 
-		System.out.println("-help for help, actually");
-
 		Cities city = determinateCity();
 
 		Restaurant restaurant = new Restaurant(city);
