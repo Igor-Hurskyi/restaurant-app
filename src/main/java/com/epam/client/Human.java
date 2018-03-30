@@ -2,8 +2,8 @@ package com.epam.client;
 
 public interface Human extends Creature {
 
-    void walk();
+	void walk();
 
-    void speak();
+	void speak();
 
 }

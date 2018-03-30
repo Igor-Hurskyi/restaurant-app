@@ -1,7 +1,6 @@
 package com.epam.main;
 
 import com.epam.client.Client;
-import com.epam.client.PoorClient;
 import com.epam.client.RichClient;
 import com.epam.general.Cities;
 import com.epam.general.MyScanner;
