@@ -1,4 +1,4 @@
-package com.epam.general;
+package com.epam.database;
 
 public enum Drinks {
 

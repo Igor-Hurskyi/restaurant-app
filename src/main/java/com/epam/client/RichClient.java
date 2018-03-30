@@ -1,12 +1,11 @@
 package com.epam.client;
 
-import com.epam.general.Drinks;
-import com.epam.general.Food;
-import com.epam.general.MyScanner;
+import com.epam.database.Drinks;
+import com.epam.database.Food;
+import com.epam.utils.MyScanner;
 import com.epam.restaurant.Order;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 
 public class RichClient extends AbstractClient implements Client {

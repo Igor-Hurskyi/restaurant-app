@@ -1,6 +1,6 @@
 package com.epam.client;
 
-import com.epam.general.MyScanner;
+import com.epam.utils.MyScanner;
 import com.epam.restaurant.Order;
 
 public class PoorClient extends AbstractClient implements Client {

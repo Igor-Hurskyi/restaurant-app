@@ -1,7 +1,7 @@
 package com.epam.restaurant;
 
-import com.epam.general.Drinks;
-import com.epam.general.Food;
+import com.epam.database.Drinks;
+import com.epam.database.Food;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;

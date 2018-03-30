@@ -1,9 +1,9 @@
 package com.epam.restaurant;
 
-import com.epam.general.Cities;
-import com.epam.general.Drinks;
-import com.epam.general.Food;
-import com.epam.general.MyScanner;
+import com.epam.database.Cities;
+import com.epam.database.Drinks;
+import com.epam.database.Food;
+import com.epam.utils.MyScanner;
 
 import java.util.*;
 

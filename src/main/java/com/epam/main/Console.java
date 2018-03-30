@@ -2,8 +2,8 @@ package com.epam.main;
 
 import com.epam.client.Client;
 import com.epam.client.RichClient;
-import com.epam.general.Cities;
-import com.epam.general.MyScanner;
+import com.epam.database.Cities;
+import com.epam.utils.MyScanner;
 import com.epam.restaurant.Order;
 import com.epam.restaurant.Restaurant;
 
